@@ -1,6 +1,7 @@
 @extends('layouts.site')
 
 @section('content')
+
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-cntent-center align-items-center">
     <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
@@ -8,17 +9,18 @@
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Янгиликлар</h2>
-          <p class="animate__animated animate__fadeInUp">Призидентимиз карорлари ва конунларидан хабардор бўлинг. Хоразим Туманида рўй бераетган янгиликлар, юзага келган муамолар ва ечимлардан бохабар бўлинг.</p>
-          <a href="#portfolio" class="btn-get-started animate__animated animate__fadeInUp scrollto">Кўпрок билиш</a>
+          <p class="animate__animated animate__fadeInUp">Прeзидентимиз карорлари ва конунларидан хабардор бўлинг.
+            Урганч туманида рўй бераетган янгиликлар, юзага келган муамолар ва ечимлардан бохабар бўлинг.</p>
+          <a href="news.html" class="btn-get-started animate__animated animate__fadeInUp scrollto">Кўпрок билиш</a>
         </div>
       </div>
 
     </div>
-  </section>
- <main id="main">
-    {{-- <!-- ======= Clients Section ======= -->
-   <section id="clients" class="clients"> -->
-   <div class="container-fluid" data-aos="zoom-in">
+  </section> 
+  <main id="main">
+    <!-- ======= Clients Section ======= -->
+  <!-- <section id="clients" class="clients"> -->
+  <!-- <div class="container-fluid" data-aos="zoom-in">
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
             <a class="swiper-slide"><img class="img-fluid " src="./assets/img/uz-gerb.png"><a
@@ -49,30 +51,158 @@
           <div class="swiper-pagination"></div>
         </div>
 
-      </div>  --}}
+      </div> -->
 
   <!-- ======= Portfoio Section ======= -->
-  <section id="portfolio" class="portfoio">
-    <div class="container" data-aos="fade-up">
+  <section id="portfolio" class="portfoio container ">
+    
+    <div class="section-title ">
+      <h2>Фото лавхалар</h2>
+    </div>
+    @foreach ($posts as $post)
+    <div class="row">
+      <div class="card mb-3" style="max-width: 5040px; max-height: 2000px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{$post->photo_path}}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{$post->title}}</h5>
+              <p class="card-text">{{$post->short_content}}</p>
+                <p class="card-text"><small class="text-body-secondary">{{$post->created_at}}</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        @endforeach
+        
+      {{-- <div class="card mb-3" style="max-width: 5040px; max-height: 2000px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/img/portfolio/portfolio-6.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div> --}}
+
+      <!-- <div class="container" data-aos="fade-up">
 
       <div class="section-title">
         <h2>Янгиликлар</h2>
       </div>
+
       <div class="row portfolio-container">
-        @foreach ($posts as $post)
+
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
           <div class="portfolio-info">
-            <h4>{{$post->title}}</h4>
-            <p>{{$post->short_content}}</p>
+            <h4>App 1</h4>
+            <p>Bugun Urganch tumanida mahallani qo'llab-quvvatlash bo'yicha tuman kengashining tashkiliy yig'ilishi bo'lib o'tdi.</p>
             <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
               class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
             <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
-        @endforeach
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Web 3</h4>
+            <p>Web</p>
+            <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info img-fluid ">
+            <h4>App 2</h4>
+            <p>App</p>
+            <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Card 2</h4>
+            <p>Card</p>
+            <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Web 2</h4>
+            <p>Web</p>
+            <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>App 3</h4>
+            <p>App</p>
+            <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Card 1</h4>
+            <p>Card</p>
+            <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Card 3</h4>
+            <p>Card</p>
+            <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Web 3</h4>
+            <p>Web</p>
+            <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
       </div>
-    </div>
+
+    </div> -->
   </section><!-- End Portfoio Section -->
 
   <!-- ======= Contact Section ======= -->
@@ -141,5 +271,4 @@
   </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
-
  @endsection
