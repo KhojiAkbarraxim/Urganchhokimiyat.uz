@@ -20,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/Bosh sahifa', [Pagecontroller ::class, 'index'])->name('home');
 Route::get('/', function(){return redirect('/Bosh sahifa');});
 Route::resource('/yangiliklar', PostController::class);
+Route::get('/tuman hokimligi apparati', function(){
+    return ('tuman hokimligi apparati (jadvali)');
+})->name('apparati');
 
 
 

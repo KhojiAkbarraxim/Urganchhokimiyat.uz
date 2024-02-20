@@ -57,7 +57,7 @@
             <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Туман хокимлиги
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="news.html">Туман ҳокимлиги аппарати</a></li>
+              <li><a class="dropdown-item" href="{{route('apparati')}}">Туман ҳокимлиги аппарати</a></li>
               <li><a class="dropdown-item" href="news.html">Бошқарув аппаратининг тузилмаси</a></li>
               <li><a class="dropdown-item" href="news.html">Қабул жадвали</a></li>
               <li><a class="dropdown-item" href="news.html">Ишонч ва ягона телефон рақамлари</a></li>
