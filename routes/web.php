@@ -23,7 +23,3 @@ Route::resource('/yangiliklar', PostController::class);
 Route::get('/tuman hokimligi apparati', function(){
     return ('tuman hokimligi apparati (jadvali)');
 })->name('apparati');
-
-
-
-
