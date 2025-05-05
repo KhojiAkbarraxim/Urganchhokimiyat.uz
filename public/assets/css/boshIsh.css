@@ -1,0 +1,164 @@
+/* bo'sh ish o'rinlari */
+* {
+    box-sizing: border-box;
+}
+
+.blog {
+    margin-top: 20px;
+}
+
+.members__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.members__items-boshish,
+.members__items-xokimish {
+    display: flex;
+    flex-direction: column;
+    width: 72.5%;
+}
+
+.members__item-boshish {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 118px;
+    padding: 5px 10px;
+}
+
+.members__boshish-box,
+.members__boshish-box-ish {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 33px;
+}
+
+
+.members__title {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #43494d;
+}
+
+.members__data-size {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.members__data-date {
+    margin-bottom: 0 !important;
+}
+
+.members__button {
+    text-align: right;
+}
+
+.members__button button {
+    border: 3px solid #337ab7;
+    background-color: #3783c6;
+    color: white;
+    padding: 5px 12px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    transition: margin .4s;
+}
+
+.members__button button:hover {
+    background-color: #337ab7;
+    border: 3px solid #337ab7;
+}
+
+/* responsive styles */
+
+@media screen and (width >=1400px) {
+
+    .members__items-boshish,
+    .members__items-xokimish {
+        width: 75%;
+    }
+}
+
+@media screen and (width < 1400px) {
+
+    .members__items-boshish,
+    .members__items-xokimish {
+        width: 72.5%;
+    }
+}
+
+@media screen and (width < 1200px) {
+
+    .members__items-boshish,
+    .members__items-xokimish {
+        width: 69%;
+    }
+
+}
+
+@media screen and (width <=992px) {
+    .members__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .members__items-boshish,
+    .members__items-xokimish {
+        width: 100%;
+    }
+}
+
+@media screen and (width < 768px) {
+    .members__item-boshish {
+        height: 105px;
+    }
+
+    .members__boshish-box,
+    .members__boshish-box-ish {
+        margin-top: 27px;
+    }
+
+    .members__title {
+        font-size: 20px;
+    }
+
+    .members__data-date,
+    .members__data-size {
+        font-size: 15px;
+    }
+
+    .members__button button {
+        padding: 4px 10px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (width < 576px) {
+    .members__item-boshish {
+        height: 100px;
+    }
+
+    .members__title {
+        font-size: 17px;
+    }
+
+    .members__data-date,
+    .members__data-size {
+        font-size: 13px;
+    }
+
+    .members__button button {
+        padding: 3px 8px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (width < 364px) {
+    .members__title {
+        font-size: 16px;
+    }
+}

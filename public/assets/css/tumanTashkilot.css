@@ -1,0 +1,24 @@
+/* responsive styles */
+@media screen and (width <=992px) {
+    .tashkilot_table {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media screen and (width < 768px) {
+    .tashkilot_table {
+        font-size: 0.7rem !important;
+    }
+}
+
+@media screen and (width < 576px) {
+    .tashkilot_table {
+        font-size: 0.6rem !important;
+    }
+}
+
+@media screen and (width < 376px) {
+    .tashkilot_table {
+        font-size: 0.5rem !important;
+    }
+}

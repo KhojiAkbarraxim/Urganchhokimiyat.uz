@@ -1,0 +1,332 @@
+/*b xokim Apparat section */
+* {
+    box-sizing: border-box;
+}
+
+.blog {
+    margin-top: 20px;
+}
+
+.members__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.members__items {
+    display: flex;
+    flex-direction: column;
+    width: 72.5%;
+}
+
+.members__item {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    height: 230px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.members__item .members__about {
+    padding: 0 3px;
+    width: 80%;
+}
+
+.members__item .members__image {
+    width: 230px;
+    height: 260px;
+    overflow: hidden;
+}
+
+.members__item .members__image img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.members__about .members__about-name {
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #236fa1;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.members__about .members__about-job {
+    text-align: left;
+    font-size: 15px;
+    color: #236fa1;
+    margin-bottom: 0;
+}
+
+.members__about .members__about-description {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #236fa1;
+}
+
+.main strong {
+    color: #236fa1;
+    font-weight: bolder;
+}
+
+.members__about .members__about-responsibility {
+    text-align: left;
+    color: #236fa1;
+    height: 78px;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+.members__about .members__about-scroll {
+    overflow-y: scroll;
+}
+
+.members__about-networking {
+    display: flex;
+    flex-direction: column;
+}
+
+.members__about-networking span {
+    width: 50%;
+    font-weight: 300;
+    font-size: 14px;
+    float: left;
+    cursor: default;
+}
+
+.majburiyat,
+.about-member,
+.qabul__vaqti {
+    display: none;
+}
+
+.member-about {
+    text-align: end;
+}
+
+.about-member p {
+    font-size: 14px;
+    color: #236fa1;
+    text-align: justify;
+    padding: 0 6px;
+}
+
+.requirement-member-p {
+    color: #236fa1;
+    text-align: justify;
+    padding: 0 6px;
+    font-size: 14px;
+}
+
+.bi-arrow-left-short {
+    font-size: 25px;
+    color: #236fa1;
+    cursor: pointer;
+}
+
+.about-member-p {
+    line-height: 20px;
+    height: 135px;
+}
+
+.about-member-scroll {
+    overflow-y: scroll;
+}
+
+.requirement-member-p {
+    line-height: 20px;
+    height: 135px;
+}
+
+.requirement-member-scroll {
+    overflow-y: scroll;
+}
+
+.member-btns button {
+    border: 0;
+    padding: 5px;
+    font-size: 12px;
+    padding: 0 20px;
+    background: #ECF6FE;
+    color: #000;
+    transition: 0.3s;
+    border-radius: 5px;
+    border: 0;
+}
+
+.member-btn-active {
+    padding-top: 4px !important;
+    background: #0880e8 !important;
+}
+
+.qabul__vaqti .day__time {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.day__time span {
+    font-weight: bold;
+    color: #0880e8;
+    cursor: default;
+}
+
+.day__time span span {
+    font-weight: normal;
+}
+
+.qabul__vaqti .desc {
+    margin-top: 10px;
+}
+
+.qabul__vaqti .desc h6 {
+    color: #0880e8;
+    font-weight: bold;
+}
+
+.desc p {
+    color: #0880e8;
+    height: 115px;
+}
+
+.p__scroll {
+    overflow-y: scroll;
+}
+
+/* responsive styles */
+
+@media screen and (width >=1400px) {
+    .members__items {
+        width: 75%;
+    }
+}
+
+@media screen and (width < 1400px) {
+    .members__items {
+        width: 72.5%;
+    }
+}
+
+@media screen and (width < 1200px) {
+    .members__items {
+        width: 69%;
+    }
+
+    .members__about .members__about-name {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .members__about .members__about-job {
+        font-size: 13px;
+    }
+
+    .members__about .members__about-responsibility {
+        font-size: 14px;
+    }
+}
+
+@media screen and (width < 992px) {
+
+    .members__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .members__item {
+        height: 210px;
+    }
+
+    .members__item .members__image {
+        width: 170px;
+        height: 100%;
+    }
+
+    .members__about .members__about-name {
+        font-size: 15px;
+        padding: 0 1px;
+        margin: 0;
+    }
+
+    .members__about .members__about-job {
+        font-size: 14px;
+        line-height: inherit;
+    }
+
+    .members__about .members__about-responsibility {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    .members__about-networking span {
+        font-size: 12px;
+    }
+
+    /* card section */
+    .card {
+        width: 16rem;
+    }
+
+    .day__time {
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    .desc {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .members__items {
+        width: 100%;
+    }
+
+    .member-btns button {
+        font-size: 11px;
+        padding: 0 4px;
+    }
+
+    .members__about .members__about-name {
+        font-size: 10px;
+    }
+
+    .main strong {
+        font-size: 12px;
+    }
+
+    .members__about .members__about-responsibility {
+        font-size: 10px;
+        height: 78px;
+    }
+
+    .requirement-member-p {
+        font-size: 10px;
+        height: 160px;
+    }
+
+    .about-member-p {
+        height: 160px;
+        font-size: 10px !important;
+    }
+
+}
+
+@media (max-width: 767.98px) {
+    .members__items {
+        width: 100%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .members__items {
+        width: 100%;
+    }
+}

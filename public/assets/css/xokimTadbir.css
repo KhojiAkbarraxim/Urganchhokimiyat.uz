@@ -1,0 +1,78 @@
+/* xokim Tadbir section */
+* {
+    box-sizing: border-box;
+}
+
+.blog {
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-lg-8 {
+    width: 65%;
+}
+
+.my-container {
+    width: 100%;
+}
+
+.splide__slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.more {
+    font-weight: bold;
+    color: #3783C6;
+    cursor: pointer;
+}
+
+@media screen and (width >=1400px) {
+    .col-lg-8 {
+        width: 75%;
+    }
+
+    .my-container {
+        width: 100%;
+    }
+
+}
+
+@media screen and (width < 1400px) {
+    .col-lg-8 {
+        width: 72.5%;
+    }
+}
+
+@media screen and (width < 1200px) {
+    .col-lg-8 {
+        width: 69%;
+    }
+
+    .card {
+        width: 17rem !important;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (width <=992px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-lg-8 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-bottom: -12px;
+    }
+}

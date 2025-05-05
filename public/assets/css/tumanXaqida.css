@@ -1,0 +1,165 @@
+/* Tuman xaqida page styles */
+* {
+    box-sizing: border-box;
+}
+
+.district__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.district__item {
+    display: flex;
+    flex-direction: column;
+    width: 72.5%;
+    box-sizing: border-box;
+    border: 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.district__item .district__title {
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    color: #43494d;
+}
+
+.district__item .district__image {
+    overflow: hidden;
+    width: 100%;
+}
+
+.district__item .district__image img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.district__about {
+    margin-top: 0;
+    padding: 20px 20px;
+    text-align: justify;
+}
+
+.district__about .district__description {
+    text-align: justify;
+    font-size: 16px;
+    color: #43494d;
+    line-height: 22px;
+}
+
+.district__about table {
+    width: 85%;
+    height: 100%;
+}
+
+.district__about table strong {
+    font-size: 14px;
+    color: #43494d;
+}
+
+.district__about table p {
+    font-size: 14px;
+    color: #626160;
+    font-weight: 500;
+    margin-bottom: 0 !important;
+}
+
+/* Responsive styles */
+@media screen and (width >=1400px) {
+    .district__item {
+        width: 75%;
+    }
+}
+
+@media screen and (width < 1400px) {
+    .district__item {
+        width: 72.5%;
+    }
+}
+
+@media screen and (width < 1200px) {
+    .district__item {
+        width: 69%;
+    }
+
+    .district__about .district__description {
+        font-size: 15px;
+        line-height: 21px;
+    }
+}
+
+@media screen and (width <=992px) {
+    .district__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .district__item {
+        width: 100%;
+    }
+}
+
+@media screen and (width < 768px) {
+    .district__item {
+        width: 100%;
+    }
+
+    .district__about .district__description {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .district__about table {
+        width: 100%;
+    }
+
+    .district__about table strong {
+        font-size: 12px;
+    }
+
+    .district__about table p {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (width < 576px) {
+    .district__item {
+        width: 100%;
+    }
+
+    .district__item .district__title {
+        font-size: 15px;
+    }
+
+    .district__about table {
+        height: 92%;
+    }
+
+}
+
+@media screen and (width < 540px) {
+    .district__about table {
+        height: 85%;
+    }
+}
+
+@media screen and (width < 429px) {
+    .district__about table {
+        height: 72%;
+    }
+}
+
+@media screen and (width < 361px) {
+    .district__about table {
+        height: 70%;
+    }
+}
+
+@media screen and (width < 345px) {
+    .district__about table {
+        height: 65%;
+    }
+}

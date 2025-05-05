@@ -1,0 +1,128 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table__wrapper {
+    width: 72%;
+}
+
+.archive-btn {
+    text-align: start;
+}
+
+.archive-btn button {
+    padding: 0 20px;
+    background: #f6b024;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 5px;
+    border: 0;
+}
+
+.archive-btn button:hover {
+    background: #0880e8;
+}
+
+.first-table {
+    display: table;
+}
+
+.second-table {
+    display: none;
+}
+
+.active__for-table {
+    background: #0880e8 !important;
+}
+
+.table th,
+td {
+    color: #6c757d !important;
+}
+
+.qabul__jadval-card{
+    width: 18rem;
+}
+
+@media screen and (width >= 1400px){
+    .table__wrapper {
+        width: 75%;
+    }
+}
+
+@media screen and (width < 1400px){
+    .table__wrapper {
+        width: 72.5%;
+    }
+}
+
+@media screen and (width < 1200px){
+    .table__wrapper {
+        width: 69%;
+    }
+}
+
+@media screen and (width <= 992px){
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .table__wrapper {
+        width: 100%;
+    }
+
+    .table{
+        font-size: 0.92rem;
+    }
+
+}
+
+@media screen and (width < 768px){
+    .archive-btn .first-archiveBtn,
+    .second-archiveBtn {
+        font-size: 0.7rem !important;
+    }
+
+    .table {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media screen and (width < 576px){
+    .table {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (width < 376px){
+    .table {
+        font-size: 0.6rem;
+    }
+}
+
+/*
+@media (max-width: 575.98px) {
+    .table {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width:767.98px) {
+
+    .archive-btn .first-archiveBtn,
+    .second-archiveBtn {
+        font-size: 0.7rem !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .table__wrapper {
+        width: 100%;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+} */
